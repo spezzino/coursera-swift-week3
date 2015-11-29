@@ -30,6 +30,8 @@ class Auto{
     }
     
     func cambioDeVelocidad( ) -> ( actual : Int, velocidadEnCadena: String){
+        let velActual = self.velocidad
+        
         switch(self.velocidad){
         case .Apagado:
             self.velocidad = .VelocidadBaja
@@ -41,7 +43,7 @@ class Auto{
             self.velocidad = .VelocidadMedia
         }
         
-        return (self.velocidad.rawValue, self.velocidad.description)
+        return (velActual.rawValue, velActual.description)
     }
 }
 
